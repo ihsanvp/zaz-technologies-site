@@ -1,0 +1,25 @@
+.nav {
+    @apply fixed top-0 left-0 right-0 z-[99] bg-transparent text-white shadow-sm;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-property: height, border-bottom, background-color, color;
+    height: 70px;
+    border-bottom:1px solid rgba(0, 0, 0, 0);
+}
+.active {
+    @apply bg-white text-slate-900;
+    height: 60px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.1);
+}
+
+.open {
+    @apply bg-slate-900 text-white;
+    border-bottom:1px solid rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        height: 60px;
+        border-bottom:1px solid rgba(0, 0, 0, 0.1);
+    }
+}

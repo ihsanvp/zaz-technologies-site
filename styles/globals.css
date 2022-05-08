@@ -1,16 +1,17 @@
-html,
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    @apply overflow-y-scroll bg-slate-100;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.app_underline--full {
+    @apply relative before:absolute before:left-0 before:right-0 before:-bottom-2 before:bg-yellow-500 before:h-[3px];
 }
 
-* {
-  box-sizing: border-box;
+.app_underline--half {
+    @apply relative before:absolute before:left-0 before:right-0 before:-bottom-2 before:bg-yellow-500 before:h-[3px] before:scale-x-50 before:origin-center;
 }
