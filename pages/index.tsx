@@ -3,10 +3,15 @@ import { Fragment } from "react";
 import { RiSearchEyeLine } from "@react-icons/all-files/ri/RiSearchEyeLine";
 import { IoInfinite } from "@react-icons/all-files/io5/IoInfinite";
 import { BiWrench } from "@react-icons/all-files/bi/BiWrench";
+import { IoIosPeople } from "@react-icons/all-files/io/IoIosPeople";
+import { FaCubes } from "@react-icons/all-files/fa/FaCubes";
+import { FaRegCalendarAlt } from "@react-icons/all-files/fa/FaRegCalendarAlt";
+import { IoSettings } from "@react-icons/all-files/io5/IoSettings";
 
 import headerImage from "assets/images/header.jpg";
-import aboutImage from "assets/images/about_img2.png";
+import aboutImage from "assets/images/about_img4.jpg";
 import whatImage from "assets/images/what_img2.png";
+import successImage from "assets/images/BG1.jpg";
 
 import Page from "components/common/Page";
 import HomeHeader from "components/home/header/HomeHeader";
@@ -18,6 +23,8 @@ import PageSection from "components/common/PageSection";
 import HomeServices from "components/home/services/HomeServices";
 import ListItem from "components/common/ListItem";
 import AppButton from "components/common/Button";
+import HomeFloatingWhatsappButton from "components/home/floating/HomeFloatingWhatsappButton";
+import HomeSuccess from "components/home/success/HomeSuccess";
 
 export default function HomePage() {
   return (
@@ -34,6 +41,7 @@ export default function HomePage() {
         </Fragment>
       }
     >
+      <HomeFloatingWhatsappButton />
       <HomeHeader
         title="Delivering technology for the future"
         subtitle={`Complete solution for CCTV Security Systems, ICT and IT Infrastructure, to provide exclusive and full-fledged Security Systems and infrastructure support to our customers.`}
@@ -105,8 +113,7 @@ export default function HomePage() {
               title: "CCTV Security Systems & Solutions",
               content: `To improve the security at home or business sites, we at ZAZ Retail have 
                 extensive product experience in order to provide innovative & customised 
-                solutions that matches your exact needs. We have lots of options with quality 
-                and advanced hybrid security systems.
+                solutions that matches your exact needs.
                 `,
               icon: "security",
             },
@@ -114,29 +121,21 @@ export default function HomePage() {
               title: "IT Network Infrastructure Solutions & Services",
               content: `We at ZAZ Retail, offers a wide range of best end user experiences with our IT 
                 networking solutions and comprises all components that enable network 
-                communication, operations and connectivity. Our state-of-the-art infrastructure 
-                solutions is compatible with almost every industry and helps you stay ahead of 
-                your competitors maintaining your infrastructure quality.
+                communication, operations and connectivity.
                 `,
               icon: "it",
             },
             {
               title: "Access Control Systems",
               content: `ZAZ Retail is one of the leading providers of robust access control systems for 
-                businesses across the industries that improves user convenience and security. Our 
-                solutions evolve with the industry, embracing the latest technologies to deliver 
-                comprehensive and modern Access Control Solutions to our clients, which is 
-                highly flexible and cost-effective.
+                businesses across the industries that improves user convenience and security.
                 `,
               icon: "access",
             },
             {
               title: "Video Intercom Systems",
               content: `Our Video Intercom Systems, provides a standard solution equipped for better 
-                communication and security. We bring you the industry’s latest intercom systems 
-                with efficient design, high performance, reliable as well as water resistant. All our 
-                solutions are easy to configure and managed by our team of professionals who 
-                will work with you at each stage of seamless integration. 
+                communication and security.
                 `,
               icon: "video",
             },
@@ -144,28 +143,46 @@ export default function HomePage() {
               title: "Audio Visual Systems",
               content: `At ZAZ Retail, we offer Audio Visual Systems & Solutions that can equip 
                 organisations with leading cutting-edge tools to enhance team performance, 
-                tailored to your business requirements. Our dedicated team of specialised subject 
-                matter experts and technicians can handle complex and large projects. We mainly 
-                focus in the areas of Professional Audio System, Video Wall Systems, Smart 
-                Meeting Rooms etc.
+                tailored to your business requirements.
                 `,
               icon: "audio",
             },
             {
               title: "Structured Cabling",
               content: `ZAZ Retail offers expert structured cabling solutions and helps to design your 
-                space intelligently which benefits you of structured cabling to your projects. We 
-                have a portfolio of top-notch and client-oriented cabling services and solutions 
-                developed by our team of networking specialists and proactively manage the 
-                process till the completion of project and required support afterwards. We aim to 
-                provide international quality benchmark standards offering unrivalled network 
-                speed, reliability & security.
+                space intelligently which benefits you of structured cabling to your projects.
                 `,
               icon: "cable",
             },
           ]}
         />
       </PageSection>
+      <HomeSuccess
+        title="What makes us different"
+        bg={successImage}
+        cards={[
+          {
+            title: "Happy Satisfied Clients",
+            data: 150,
+            icon: IoIosPeople,
+          },
+          {
+            title: "Projects done",
+            data: 450,
+            icon: FaCubes,
+          },
+          {
+            title: "Years of Experience",
+            data: 9,
+            icon: FaRegCalendarAlt,
+          },
+          {
+            title: "Suport Staffs",
+            data: 100,
+            icon: IoSettings,
+          },
+        ]}
+      />
       <PageSection className="pb-40">
         <DividedCardLayout>
           <DividedCardImage img={whatImage} />

@@ -39,9 +39,11 @@ export default function ServicesLayout(props: Props) {
 
               if (index == props.cards.length - 1) {
                 return (
-                  <div className="col-span-2 flex items-center justify-center">
+                  <div
+                    key={card.title}
+                    className="col-span-2 flex items-center justify-center"
+                  >
                     <ServicesDisplayCard
-                      key={card.title}
                       title={card.title}
                       content={card.content}
                       icon={card.icon}

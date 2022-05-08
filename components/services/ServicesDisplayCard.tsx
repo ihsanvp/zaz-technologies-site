@@ -16,7 +16,6 @@ interface Props {
   animationDelay?: number;
 }
 export default function ServicesDisplayCard(props: Props) {
-  console.log(props.animationDelay);
   return (
     <AnimatedAppear
       hidden={{

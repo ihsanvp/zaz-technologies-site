@@ -3,12 +3,13 @@ import { Fragment } from "react";
 import useNavbar from "hooks/useNavbar";
 import Bar from "./Bar";
 import Menu from "./Menu";
-import { AppLink } from "types/app";
+import { AppLink, AppSocial } from "types/app";
 
 interface Props {
   logo: ResponsiveImage;
   mobileLogo: ResponsiveImage;
   links: AppLink[];
+  socials: AppSocial[];
 }
 
 export default function AppNavbar(props: Props) {
@@ -28,6 +29,7 @@ export default function AppNavbar(props: Props) {
         closeMenu={navbar.closeMenu}
         open={navbar.isMenuOpen()}
         links={props.links}
+        socials={props.socials}
       />
     </Fragment>
   );

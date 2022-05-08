@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import NextNProgress from "nextjs-progressbar";
 import TopBanner from "components/banner/TopBanner";
 import AppNavbar from "components/navbar/AppNavbar";
@@ -14,6 +14,7 @@ import miniLogoImage from "assets/images/logo_mini.jpg";
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { AiFillInstagram } from "@react-icons/all-files/ai/AiFillInstagram";
+import { IoLogoWhatsapp } from "@react-icons/all-files/io/IoLogoWhatsapp";
 import { AppLink, AppSocial } from "types/app";
 import AppFooter from "components/footer/AppFooter";
 import contactData from "data/contact";
@@ -39,15 +40,21 @@ const LINKS: AppLink[] = [
 
 const SOCIALS: AppSocial[] = [
   {
-    url: "",
+    url: `https://wa.me/+917994152171?text=${encodeURIComponent(
+      "I'd like to chat with you"
+    )}`,
+    icon: IoLogoWhatsapp,
+  },
+  {
+    url: "https://www.google.com/search?q=facebook",
     icon: FaFacebook,
   },
   {
-    url: "",
+    url: "https://www.google.com/search?q=twitter",
     icon: FaTwitter,
   },
   {
-    url: "",
+    url: "https://www.google.com/search?q=instagram",
     icon: AiFillInstagram,
   },
 ];
@@ -66,20 +73,30 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     return <span key={index}>{data}</span>;
   }
 
+  useEffect(() =>
+    console.log(
+      "%cDesign & Code by www.studiotwofour.com",
+      "color: white; background-color: rebeccapurple; padding: 10px; margin: 20px 0;"
+    )
+  );
+
   return (
     <Fragment>
       <NextNProgress color="rgb(15 23 42)" options={{ showSpinner: false }} />
       <div className="flex flex-col items-stretch min-h-screen">
         <AnimatePresence>
           <TopBanner
+            key="banner"
             mobile={contactData.mobiles[0]}
             mail={contactData.mails[0]}
             socials={SOCIALS}
           />
           <AppNavbar
+            key="navbar"
             logo={logoImage}
             mobileLogo={miniLogoImage}
             links={LINKS}
+            socials={SOCIALS}
           />
         </AnimatePresence>
         <AnimatePresence

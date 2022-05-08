@@ -1,6 +1,8 @@
 import { AppSocial } from "types/app";
 
-interface Props extends AppSocial {}
+interface Props extends AppSocial {
+  size?: number;
+}
 
 export default function SocialButton(props: Props) {
   return (
@@ -10,7 +12,7 @@ export default function SocialButton(props: Props) {
       target="_blank"
       rel="noreferrer"
     >
-      <props.icon size="15" />
+      <props.icon size={props.size || 15} />
     </a>
   );
 }

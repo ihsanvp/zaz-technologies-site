@@ -30,7 +30,7 @@ export default function HomeServicesCard(props: Props) {
       {(animate) => (
         <motion.div
           {...animate}
-          className="w-full px-5 py-20 sm:px-7 sm:py-10 2xl:py-20 md:px-10 bg-white rounded-md"
+          className="w-full px-5 py-20 sm:px-7 sm:py-10 2xl:py-20 md:px-10 bg-white rounded-md flex flex-col items-center justify-center"
         >
           <div className="w-full flex flex-col items-center justify-center gap-5 lg:gap-10">
             <div className="flex items-center justify-center rounded-sm w-[50px] h-[50px]">

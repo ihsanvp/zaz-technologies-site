@@ -29,7 +29,7 @@ export default function HomeFeaturesCard(props: Props) {
       {(animate) => (
         <motion.div
           {...animate}
-          className="w-full px-5 py-10 sm:px-7 sm:py-10 xl:py-10 md:px-10 bg-white rounded-md"
+          className="w-full px-5 py-10 sm:px-7 sm:py-10 xl:py-10 md:px-10 bg-white rounded-md flex flex-col items-center justify-center"
         >
           <div className="w-full flex flex-col items-center justify-center gap-5 lg:gap-10">
             <div className="p-3 flex items-center justify-center rounded-md text-white bg-blue-900">
