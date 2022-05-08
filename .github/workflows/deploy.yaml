@@ -15,10 +15,13 @@ jobs:
         with:
           node-version: "16"
 
+      - name: Install Yarn
+        run: npm i -g yarn
+
       - name: 🔨 Build Project
         run: |
-          npm install
-          npm run build
+          yarn install
+          yarn build
 
       - name: 📂 Upload files
         uses: airvzxf/ftp-deployment-action@latest
