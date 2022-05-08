@@ -62,8 +62,7 @@ export default function AppFooter(props: Props) {
         <div className="border-t border-slate-700 py-5">
           <div className="flex items-center justify-between">
             <div className="text-xs text-slate-300">
-              2015 © All Rights Reserved | Designed and Developed by
-              Smarteyeapps
+              2020 © All Rights Reserved
             </div>
             <div className="flex items-center justify-center gap-5 md:gap-5">
               {props.socials.length

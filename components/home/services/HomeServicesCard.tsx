@@ -4,7 +4,7 @@ import { IconKey } from "data/icons";
 import { motion } from "framer-motion";
 
 interface Props {
-  transitionDelayOrder?: number;
+  animationDelay?: number;
   title: string;
   content: string;
   icon: IconKey;
@@ -23,14 +23,14 @@ export default function HomeServicesCard(props: Props) {
       }}
       transition={{
         duration: 1,
-        delay: (props.transitionDelayOrder || 0) * 0.2,
+        delay: props.animationDelay || 0,
         type: "spring",
       }}
     >
       {(animate) => (
         <motion.div
           {...animate}
-          className="w-full px-5 py-20 sm:px-7 sm:py-10 xl:py-20 md:px-10 bg-white rounded-md"
+          className="w-full px-5 py-20 sm:px-7 sm:py-10 2xl:py-20 md:px-10 bg-white rounded-md"
         >
           <div className="w-full flex flex-col items-center justify-center gap-5 lg:gap-10">
             <div className="flex items-center justify-center rounded-sm w-[50px] h-[50px]">

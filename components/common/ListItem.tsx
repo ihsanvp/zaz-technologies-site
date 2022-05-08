@@ -9,9 +9,9 @@ export default function ListItem(props: Props) {
   return (
     <li className="flex gap-3 py-1">
       <div className="text-blue-900">
-        <IoMdCheckmarkCircleOutline />
+        <IoMdCheckmarkCircleOutline size="25" />
       </div>
-      <div className="text-base">{props.children}</div>
+      <div className="text-lg">{props.children}</div>
     </li>
   );
 }

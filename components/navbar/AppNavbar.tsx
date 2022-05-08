@@ -7,6 +7,7 @@ import { AppLink } from "types/app";
 
 interface Props {
   logo: ResponsiveImage;
+  mobileLogo: ResponsiveImage;
   links: AppLink[];
 }
 
@@ -20,6 +21,7 @@ export default function AppNavbar(props: Props) {
         openMenu={navbar.openMenu}
         active={navbar.isNavbarActive()}
         logo={props.logo}
+        mobileLogo={props.mobileLogo}
         links={props.links}
       />
       <Menu

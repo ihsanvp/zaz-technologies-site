@@ -1,13 +1,6 @@
 const siteData = {
-  title: "Z A Z Plus Technologies LLC",
-  description: `We provide services in 
-    CCTV Security Systems & Solutions, 
-    IT Network Infrastructure Solutions & Services, 
-    Access Control Systems, 
-    Video Intercom Systems, 
-    Audio Visual Systems, 
-    Structured Cabling, 
-    Fibre Installations.
+  title: "ZAZ Plus Technologies LLC",
+  description: `Complete solution for CCTV Security Systems, ICT and IT Infrastructure, to provide exclusive and full-fledged Security Systems and infrastructure support to our customers.
   `,
 };
 

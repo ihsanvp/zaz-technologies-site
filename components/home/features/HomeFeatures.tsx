@@ -6,13 +6,12 @@ interface Props {
 }
 
 export default function HomeFeatures(props: Props) {
-  const columns = useAnimationColumns(() => {
-    if (window.innerWidth < 768) {
-      return 1;
-    }
-
-    return 3;
-  }, 3);
+  const columns = useAnimationColumns({
+    breakpoints: {
+      768: 1,
+    },
+    initial: 3,
+  });
 
   return (
     <section className="-mt-16 z-[5] relative">
@@ -22,7 +21,7 @@ export default function HomeFeatures(props: Props) {
             ? props.cards.map((card, index) => (
                 <HomeFeaturesCard
                   key={card.title}
-                  transitionDelayOrder={index % columns}
+                  animationDelay={(index % columns) * 0.2}
                   title={card.title}
                   content={card.content}
                   icon={card.icon}

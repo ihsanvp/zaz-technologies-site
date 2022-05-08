@@ -13,7 +13,7 @@ interface Props {
 export default function TopBanner(props: Props) {
   return (
     <motion.div
-      className="bg-blue-900 py-3 overflow-hidden"
+      className="bg-blue-900 py-5 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -30,7 +30,7 @@ export default function TopBanner(props: Props) {
               <div className="text-sm">{props.mail}</div>
             </div>
             <div className="text-sm hidden sm:block text-white">|</div>
-            <div className="flex gap-2 items-center t">
+            <div className="flex gap-3 items-center t">
               {props.socials.length
                 ? props.socials.map((social) => (
                     <SocialButton

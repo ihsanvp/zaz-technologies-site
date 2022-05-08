@@ -3,7 +3,7 @@ import AnimatedAppear from "components/common/AnimatedAppear";
 import { motion } from "framer-motion";
 
 interface Props {
-  transitionDelayOrder?: number;
+  animationDelay?: number;
   title: string;
   content: string;
   icon: IconType;
@@ -22,7 +22,7 @@ export default function HomeFeaturesCard(props: Props) {
       }}
       transition={{
         duration: 1,
-        delay: (props.transitionDelayOrder || 0) * 0.2,
+        delay: props.animationDelay || 0,
         type: "spring",
       }}
     >

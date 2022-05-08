@@ -21,7 +21,7 @@ export default function AppButton(props: Props) {
     <Link href={props.href} scroll={false}>
       <a
         className={classNames(
-          "text-sm px-16 py-3 rounded font-medium",
+          "text px-16 py-3 rounded font-medium",
           VARIANTS[props.variant]
         )}
       >

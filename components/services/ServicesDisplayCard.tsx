@@ -1,22 +1,22 @@
 import classNames from "classnames";
+import AnimatedAppear from "components/common/AnimatedAppear";
+import AppIcon from "components/common/AppIcon";
 import Image from "components/common/Image";
 
 import { IconKey } from "data/icons";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
-import AnimatedAppear from "./common/AnimatedAppear";
-import AppIcon from "./common/AppIcon";
 
 interface Props {
   image: ResponsiveImage;
   icon: IconKey;
   title: string;
-  children?: ReactNode;
+  content: string;
   className?: string;
   animationDelay?: number;
 }
-
-export default function ServiceDisplay(props: Props) {
+export default function ServicesDisplayCard(props: Props) {
+  console.log(props.animationDelay);
   return (
     <AnimatedAppear
       hidden={{
@@ -55,7 +55,7 @@ export default function ServiceDisplay(props: Props) {
             <div className="text-blue-900 text-2xl font-bold text-center font-barlow relative before:absolute before:inset-0 before:scale-50 before:origin-center before:-bottom-2 before:top-auto before:bg-yellow-500 before:h-[3px]">
               {props.title}
             </div>
-            <p className="text-center">{props.children}</p>
+            <p className="text-center">{props.content}</p>
           </div>
         </motion.div>
       )}
@@ -63,4 +63,4 @@ export default function ServiceDisplay(props: Props) {
   );
 }
 
-export type ServiceDisplayProps = Props;
+export type ServicesDisplayCardProps = Props;

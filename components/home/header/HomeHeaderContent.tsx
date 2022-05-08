@@ -27,7 +27,7 @@ export default function HomeHeaderContent(props: Props) {
             {props.title}
           </motion.h1>
           <motion.p
-            className="text-sm lg:pr-40 text-center md:text-left text-slate-300"
+            className="lg:pr-40 text-center md:text-left text-slate-300"
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{

@@ -10,9 +10,7 @@ export default function AboutPage() {
   return (
     <Page>
       <div className="container mx-auto py-20">
-        <div className="flex items-center justify-center">
-          <PageTitle>About Us</PageTitle>
-        </div>
+        <PageTitle>About Us</PageTitle>
         <div className="grid md:grid-cols-2 gap-10">
           <AboutCard title="Mission">
             <p>

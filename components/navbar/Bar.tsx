@@ -13,6 +13,7 @@ interface Props {
   openMenu: VoidFunction;
   active: boolean;
   logo: ResponsiveImage;
+  mobileLogo: ResponsiveImage;
   links: AppLink[];
 }
 
@@ -24,13 +25,13 @@ export default function Bar(props: Props) {
       transition={{ duration: 0.5 }}
       ref={props.onMount}
       className={classNames(
-        "sticky top-[-1px] h-[60px] bg-white z-[99] shadow-sm transition-shadow duration-300",
+        "sticky top-[-1px] h-[70px] bg-white z-[99] shadow-sm transition-shadow duration-300",
         props.active ? "shadow-sm" : "shadow-none"
       )}
     >
       <div
         className={classNames(
-          "absolute inset-0 left-[240px] sm:left-[50vw] md:left-[40vw] lg:left-[30vw] z-[-1] transition-colors duration-300",
+          "absolute inset-0 left-[70px] sm:left-[55vw] md:left-[45vw] lg:left-[35vw] z-[-1] transition-colors duration-300",
           !props.active && "bg-slate-900"
         )}
       ></div>
@@ -39,8 +40,14 @@ export default function Bar(props: Props) {
           <Link href="/">
             <a className="h-full block">
               <Image
-                className="h-full w-auto"
+                className="hidden sm:block h-full w-auto"
                 src={props.logo}
+                alt="logo"
+                sizes="30vw"
+              />
+              <Image
+                className="sm:hidden h-full w-auto -translate-x-4"
+                src={props.mobileLogo}
                 alt="logo"
                 sizes="30vw"
               />
@@ -59,6 +66,7 @@ export default function Bar(props: Props) {
                   key={link.href}
                   label={link.label}
                   href={link.href}
+                  isNavbarActive={props.active}
                 />
               ))
             : null}

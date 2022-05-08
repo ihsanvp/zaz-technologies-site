@@ -12,18 +12,13 @@ interface Props {
 }
 
 export default function HomeServices(props: Props) {
-  const columns = useAnimationColumns(() => {
-    if (window.innerWidth < 640) {
-      return 1;
-    }
-    if (window.innerWidth < 1024) {
-      return 2;
-    }
-
-    return 3;
-  }, 3);
-
-  console.log(columns);
+  const columns = useAnimationColumns({
+    breakpoints: {
+      640: 1,
+      1024: 2,
+    },
+    initial: 3,
+  });
 
   return (
     <Fragment>
@@ -32,11 +27,11 @@ export default function HomeServices(props: Props) {
           {props.title}
         </h3>
       </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 mt-20">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-10 mt-20">
         {props.cards.length
           ? props.cards.map((card, index) => (
               <HomeServicesCard
-                transitionDelayOrder={index % columns}
+                animationDelay={(index % columns) * 0.2}
                 key={card.title}
                 title={card.title}
                 content={card.content}
