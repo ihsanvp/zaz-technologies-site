@@ -29,14 +29,13 @@ export default function AnimatedAppear(props: Props) {
 
   const [ref, showing] = useInView({
     triggerOnce: true,
-    rootMargin: "-20% 0px",
+    rootMargin: "-10% 0px",
     initialInView: false,
   });
 
   useEffect(() => {
     if (showing) {
       controls.start("visible");
-      console.log("ok");
     }
   }, [showing, controls]);
 

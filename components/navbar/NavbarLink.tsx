@@ -11,8 +11,6 @@ export default function NavbarLink(props: Props) {
   const router = useRouter();
   const isActive = router.route == props.href;
 
-  console.log(isActive, props.href);
-
   return (
     <Link href={props.href} scroll={false}>
       <a

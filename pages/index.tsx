@@ -5,8 +5,8 @@ import { IoInfinite } from "@react-icons/all-files/io5/IoInfinite";
 import { BiWrench } from "@react-icons/all-files/bi/BiWrench";
 
 import headerImage from "assets/images/header.jpg";
-import aboutImage from "assets/images/about.png";
-import whatImage from "assets/images/what.png";
+import aboutImage from "assets/images/about_img2.png";
+import whatImage from "assets/images/what_img2.png";
 
 import Page from "components/common/Page";
 import HomeHeader from "components/home/header/HomeHeader";
