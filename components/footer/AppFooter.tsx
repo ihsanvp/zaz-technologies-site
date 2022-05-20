@@ -6,6 +6,7 @@ import SocialButton from "components/common/SocialButton";
 import FooterItem from "./FooterItem";
 import FooterLink from "./FooterLink";
 import { ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
 
 interface Props {
   title: string | ReactNode;
@@ -15,6 +16,7 @@ interface Props {
   location: string | ReactNode;
   mail: string | ReactNode;
   mobile: string | ReactNode;
+  groupLogo: ResponsiveImage;
 }
 
 export default function AppFooter(props: Props) {
@@ -22,14 +24,14 @@ export default function AppFooter(props: Props) {
     <footer className="bg-slate-900 overflow-hidden">
       <div className="container mx-auto">
         <div className="pt-20 pb-20">
-          <div className="grid lg:grid-cols-5 gap-10">
-            <div className="col-span-2 flex flex-col gap-10">
+          <div className="grid md:grid-cols-5 gap-x-10 gap-y-20">
+            <div className="col-span-1 md:col-span-2 flex flex-col gap-10">
               <div className="text-2xl text-white font-barlow font-bold">
                 {props.title}
               </div>
               <div className="text-slate-400 pr-10">{props.subtitle}</div>
             </div>
-            <div>
+            <div className="col-span-1">
               <div className="text-white text-xl font-barlow font-medium mb-5 md:mb-10">
                 Links
               </div>
@@ -45,7 +47,7 @@ export default function AppFooter(props: Props) {
                   : null}
               </div>
             </div>
-            <div className="col-span-1 lg:col-span-2">
+            <div className="col-span-1 md:col-span-2">
               <div className="text-white text-xl font-barlow font-medium mb-5 md:mb-10">
                 Company
               </div>
@@ -53,6 +55,15 @@ export default function AppFooter(props: Props) {
                 <FooterItem icon={MdMyLocation}>{props.location}</FooterItem>
                 <FooterItem icon={MdMail}>{props.mail}</FooterItem>
                 <FooterItem icon={MdPhone}>{props.mobile}</FooterItem>
+                <div className="flex flex-col mt-5 gap-3">
+                  <div className="text-lg text-slate-400 font-barlow">
+                    Our Group Company
+                  </div>
+                  <Image
+                    src={props.groupLogo as StaticImageData}
+                    alt="group-company"
+                  />
+                </div>
               </div>
             </div>
           </div>

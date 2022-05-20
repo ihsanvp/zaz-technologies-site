@@ -23,7 +23,6 @@ export default function HomeFeatures(props: Props) {
                   key={card.title}
                   animationDelay={(index % columns) * 0.2}
                   title={card.title}
-                  content={card.content}
                   icon={card.icon}
                 />
               ))

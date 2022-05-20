@@ -8,8 +8,8 @@ import { FaCubes } from "@react-icons/all-files/fa/FaCubes";
 import { FaRegCalendarAlt } from "@react-icons/all-files/fa/FaRegCalendarAlt";
 import { IoSettings } from "@react-icons/all-files/io5/IoSettings";
 
-import headerImage from "assets/images/header.jpg";
-import aboutImage from "assets/images/about_img4.jpg";
+import headerImage from "assets/images/Head-Banner-1new.jpg";
+import aboutImage from "assets/images/about_img6.jpg";
 import whatImage from "assets/images/what_img2.png";
 import successImage from "assets/images/BG1.jpg";
 
@@ -43,30 +43,29 @@ export default function HomePage() {
     >
       <HomeFloatingWhatsappButton />
       <HomeHeader
+        titles={[
+          "Delivering technology for the future",
+          "Your third eye to the world",
+        ]}
         title="Delivering technology for the future"
         subtitle={`Complete solution for CCTV Security Systems, ICT and IT Infrastructure, to provide exclusive and full-fledged Security Systems and infrastructure support to our customers.`}
         buttonText="Let's talk"
         buttonUrl="/contact"
         bg={headerImage}
+        animationTime={5000}
       />
       <HomeFeatures
         cards={[
           {
             title: "Skilled Workforce",
-            content:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ever since the",
             icon: BiWrench,
           },
           {
             title: "Attention to Detail",
-            content:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ever since the",
             icon: RiSearchEyeLine,
           },
           {
             title: "Agile and ever-evolving",
-            content:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ever since the",
             icon: IoInfinite,
           },
         ]}
@@ -110,49 +109,37 @@ export default function HomePage() {
           buttonUrl="/services"
           cards={[
             {
+              title: "Automation Systems & Solutions",
+              content: `We are dealing with a wide range of technologies and solutions to help minimise the human tasks by setting deﬁned rules and actions for the best results of higher productivity, efﬁciency, quality & safety.`,
+              icon: "automation",
+            },
+            {
               title: "CCTV Security Systems & Solutions",
-              content: `To improve the security at home or business sites, we at ZAZ Retail have 
-                extensive product experience in order to provide innovative & customised 
-                solutions that matches your exact needs.
-                `,
+              content: `To improve the security at home or business sites, we at ZAZ Retail have extensive product experience in order to provide innovative & customised solutions that matches your exact needs.`,
               icon: "security",
             },
             {
               title: "IT Network Infrastructure Solutions & Services",
-              content: `We at ZAZ Retail, offers a wide range of best end user experiences with our IT 
-                networking solutions and comprises all components that enable network 
-                communication, operations and connectivity.
-                `,
+              content: `We at ZAZ Retail, offers a wide range of best end user experiences with our IT networking solutions and comprises all components that enable network communication, operations and connectivity.`,
               icon: "it",
             },
             {
               title: "Access Control Systems",
-              content: `ZAZ Retail is one of the leading providers of robust access control systems for 
-                businesses across the industries that improves user convenience and security.
+              content: `ZAZ Retail is one of the leading providers of robust access control systems for businesses across the industries that improves user convenience and security.
                 `,
               icon: "access",
             },
             {
               title: "Video Intercom Systems",
-              content: `Our Video Intercom Systems, provides a standard solution equipped for better 
-                communication and security.
+              content: `Our Video Intercom Systems, provides a standard solution equipped for better communication and security.
                 `,
               icon: "video",
             },
             {
               title: "Audio Visual Systems",
-              content: `At ZAZ Retail, we offer Audio Visual Systems & Solutions that can equip 
-                organisations with leading cutting-edge tools to enhance team performance, 
-                tailored to your business requirements.
+              content: `At ZAZ Retail, we offer Audio Visual Systems & Solutions that can equip organisations with leading cutting-edge tools to enhance team performance, tailored to your business requirements.
                 `,
               icon: "audio",
-            },
-            {
-              title: "Structured Cabling",
-              content: `ZAZ Retail offers expert structured cabling solutions and helps to design your 
-                space intelligently which benefits you of structured cabling to your projects.
-                `,
-              icon: "cable",
             },
           ]}
         />

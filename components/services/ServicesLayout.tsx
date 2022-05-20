@@ -9,6 +9,7 @@ import ServicesDisplayCard, {
 
 interface Props {
   title: string;
+  subtitle: string;
   cards: ServicesDisplayCardProps[];
 }
 
@@ -22,7 +23,7 @@ export default function ServicesLayout(props: Props) {
 
   return (
     <div className="container mx-auto py-20">
-      <PageTitle>{props.title}</PageTitle>
+      <PageTitle subtitle={props.subtitle}>{props.title}</PageTitle>
       <div className="flex flex-col md:grid md:grid-cols-2 gap-5 lg:gap-10">
         {props.cards.length
           ? props.cards.map((card, index) => {
@@ -37,7 +38,7 @@ export default function ServicesLayout(props: Props) {
                 animationDelay += initialDelay;
               }
 
-              if (index == props.cards.length - 1) {
+              if (index == props.cards.length - 1 && index % 2 == 0) {
                 return (
                   <div
                     key={card.title}

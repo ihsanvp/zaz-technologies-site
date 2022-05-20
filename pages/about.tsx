@@ -1,6 +1,6 @@
 import Page from "components/common/Page";
 
-import img from "assets/images/about_img3.png";
+import img from "assets/images/about_img4.jpg";
 import Image from "components/common/Image";
 import ListItem from "components/common/ListItem";
 import AboutLayout from "components/about/AboutLayout";
@@ -17,10 +17,10 @@ export default function AboutPage() {
             children: (
               <Fragment>
                 <p>
-                  We desire to achieve in the long-run, the demand for dynamic
-                  and efficient IT infrastructure solutions & services through
-                  enabling our client’s scalability efficiently by providing the
-                  best tools to streamline their business.
+                  Our dedicated & skilled team focuses on our client’s needs to
+                  deliver effective results at each milestone, tailored to meet
+                  individual client speciﬁc requirements and budget using the
+                  latest infrastructure and technology.
                 </p>
               </Fragment>
             ),
@@ -30,10 +30,10 @@ export default function AboutPage() {
             children: (
               <Fragment>
                 <p>
-                  Our dedicated & skilled team focuses on our client’s needs to
-                  deliver effective results at each milestone, tailored to meet
-                  individual client specific requirements and budget using the
-                  latest infrastructure and technology.
+                  We desire to achieve in the long-run, the demand for dynamic
+                  and efﬁcient IT infrastructure solutions & services through
+                  enabling our client’s scalability efﬁciently by providing the
+                  best tools to streamline their business.
                 </p>
               </Fragment>
             ),

@@ -43,7 +43,7 @@ export default function AboutLayout(props: Props) {
       <AnimatedAppear
         hidden={{ opacity: 0 }}
         visible={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         {(animate) => (
           <motion.div {...animate} className="mt-20">

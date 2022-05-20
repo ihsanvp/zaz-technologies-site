@@ -54,8 +54,8 @@ export default function HomeServices(props: Props) {
       </div>
       <div className="flex items-center justify-center py-10">
         <AnimatedAppear
-          hidden={{ scale: 0.9, opacity: 0 }}
-          visible={{ scale: 1, opacity: 1 }}
+          hidden={{ scale: 0.9, opacity: 0, y: 40 }}
+          visible={{ scale: 1, opacity: 1, y: 0 }}
           transition={{ duration: 1, type: "spring" }}
         >
           {(animate) => (

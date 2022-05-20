@@ -20,9 +20,9 @@ export default function Menu(props: Props) {
         <motion.div
           key="menu"
           className="fixed inset-0 bg-slate-900 z-[99]"
-          initial={{ clipPath: "inset(0 0 0 100%)" }}
-          animate={{ clipPath: "inset(0 0 0 0%)" }}
-          exit={{ clipPath: "inset(0 100% 0 0)" }}
+          initial={{ clipPath: "inset(0 0 0 100%)", x: 40 }}
+          animate={{ clipPath: "inset(0 0 0 0%)", x: 0 }}
+          exit={{ clipPath: "inset(0 100% 0 0)", x: -40 }}
           transition={{ duration: 0.5 }}
         >
           <div className="container mx-auto flex flex-col w-full h-full py-5">

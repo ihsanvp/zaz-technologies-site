@@ -44,12 +44,22 @@ export default function HomeSuccessCard(props: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
+  function renderValue() {
+    if (value < 10) {
+      return "0" + value;
+    }
+
+    return "" + value;
+  }
+
   return (
     <div ref={ref} className="flex flex-col items-center justify-center gap-5">
       <div className="p-5 rounded-full bg-white text-blue-900">
         <props.icon size={35} />
       </div>
-      <div className="text-white font-barlow font-bold text-4xl">{value}+</div>
+      <div className="text-white font-barlow font-bold text-4xl">
+        {renderValue()}+
+      </div>
       <div className="text-slate-200">{props.title}</div>
     </div>
   );

@@ -22,7 +22,7 @@ export default function TopBanner(props: Props) {
         <div className="flex items-center justify-between">
           <div className="hidden sm:flex gap-3 items-center text-slate-300">
             <MdPhone size="20" />
-            <div className="text-sm">{props.mobile}</div>
+            <div className="text-base">{props.mobile}</div>
           </div>
           <div className="flex flex-1 sm:flex-none items-center justify-between sm:justify-center gap-5">
             <div className="flex gap-3 items-center text-slate-300">

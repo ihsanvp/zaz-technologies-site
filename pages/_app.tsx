@@ -8,8 +8,8 @@ import NextNProgress from "nextjs-progressbar";
 import TopBanner from "components/banner/TopBanner";
 import AppNavbar from "components/navbar/AppNavbar";
 
-import logoImage from "assets/images/logo.jpg";
-import miniLogoImage from "assets/images/logo_mini.jpg";
+import logoImage from "assets/images/ZAZ+Tech_logo New.png";
+import groupCompanyLogo from "assets/images/PGBS LOGO.png";
 
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
@@ -92,9 +92,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             socials={SOCIALS}
           />
           <AppNavbar
-            key="navbar"
             logo={logoImage}
-            mobileLogo={miniLogoImage}
+            key="navbar"
             links={LINKS}
             socials={SOCIALS}
           />
@@ -120,6 +119,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
               ZAZ PLUS <br /> TECHNOLOGIES
             </Fragment>
           }
+          groupLogo={groupCompanyLogo}
           subtitle={`Complete solution for CCTV Security Systems, ICT and IT Infrastructure, to provide exclusive and full-fledged Security Systems and infrastructure support to our customers.`}
           links={LINKS}
           socials={SOCIALS}

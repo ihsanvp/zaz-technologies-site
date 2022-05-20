@@ -29,7 +29,7 @@ export default function AnimatedAppear(props: Props) {
 
   const [ref, showing] = useInView({
     triggerOnce: true,
-    rootMargin: "-10% 0px",
+    rootMargin: "-50px 0px",
     initialInView: false,
   });
 
