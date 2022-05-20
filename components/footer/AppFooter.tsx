@@ -59,10 +59,16 @@ export default function AppFooter(props: Props) {
                   <div className="text-lg text-slate-400 font-barlow">
                     Our Group Company
                   </div>
-                  <Image
-                    src={props.groupLogo as StaticImageData}
-                    alt="group-company"
-                  />
+                  <a
+                    href="https://primedubai.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Image
+                      src={props.groupLogo as StaticImageData}
+                      alt="group-company"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
