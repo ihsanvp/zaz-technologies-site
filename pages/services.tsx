@@ -1,6 +1,6 @@
 import Page from "components/common/Page";
 
-import automationImage from "assets/images/image-20.jpg";
+import automationImage from "assets/images/Image-20.jpg";
 import securityImage from "assets/images/Image-21.jpg";
 import itImage from "assets/images/Image-8.jpg";
 import accessImage from "assets/images/Image-9.jpg";
