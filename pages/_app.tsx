@@ -8,7 +8,7 @@ import NextNProgress from "nextjs-progressbar";
 import TopBanner from "components/banner/TopBanner";
 import AppNavbar from "components/navbar/AppNavbar";
 
-import logoImage from "assets/images/ZAZ+Tech_logo New.png";
+import logoImage from "assets/images/logo-dark.png";
 import groupCompanyLogo from "assets/images/PGBS LOGO.png";
 
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";

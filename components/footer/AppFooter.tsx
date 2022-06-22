@@ -6,7 +6,10 @@ import SocialButton from "components/common/SocialButton";
 import FooterItem from "./FooterItem";
 import FooterLink from "./FooterLink";
 import { ReactNode } from "react";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
+import Image from "components/common/Image";
+
+import logo from "assets/images/logo-light.png";
 
 interface Props {
   title: string | ReactNode;
@@ -26,10 +29,40 @@ export default function AppFooter(props: Props) {
         <div className="pt-20 pb-20">
           <div className="grid md:grid-cols-5 gap-x-10 gap-y-20">
             <div className="col-span-1 md:col-span-2 flex flex-col gap-10">
-              <div className="text-2xl text-white font-barlow font-bold">
-                {props.title}
+              <div className="w-[200px]">
+                <Image className="w-full object-cover" src={logo} alt="logo" />
               </div>
               <div className="text-slate-400 pr-10">{props.subtitle}</div>
+              <div className="flex flex-col mt-5 gap-3">
+                <div className="text-lg text-slate-200 font-barlow">
+                  Our Group Company
+                </div>
+                <a
+                  href="https://primedubai.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image src={props.groupLogo} alt="group-company" />
+                </a>
+              </div>
+            </div>
+            <div className="col-span-1 md:col-span-2">
+              <div className="text-white text-xl font-barlow font-medium mb-5 md:mb-10">
+                Company
+              </div>
+              <div className="flex flex-col gap-5 items-start">
+                <FooterItem icon={MdMyLocation}>{props.location}</FooterItem>
+                <FooterItem icon={MdMail}>{props.mail}</FooterItem>
+                <FooterItem icon={MdPhone}>{props.mobile}</FooterItem>
+                <div className="flex flex-col mt-5 gap-3">
+                  <div className="text-lg text-slate-200 font-barlow">
+                    Our Retail Shop
+                  </div>
+                  <div className="text-slate-400">
+                    Al Waha street, Al Quoz Dubai, UAE
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="col-span-1">
               <div className="text-white text-xl font-barlow font-medium mb-5 md:mb-10">
@@ -45,31 +78,6 @@ export default function AppFooter(props: Props) {
                       />
                     ))
                   : null}
-              </div>
-            </div>
-            <div className="col-span-1 md:col-span-2">
-              <div className="text-white text-xl font-barlow font-medium mb-5 md:mb-10">
-                Company
-              </div>
-              <div className="flex flex-col gap-5 items-start">
-                <FooterItem icon={MdMyLocation}>{props.location}</FooterItem>
-                <FooterItem icon={MdMail}>{props.mail}</FooterItem>
-                <FooterItem icon={MdPhone}>{props.mobile}</FooterItem>
-                <div className="flex flex-col mt-5 gap-3">
-                  <div className="text-lg text-slate-400 font-barlow">
-                    Our Group Company
-                  </div>
-                  <a
-                    href="https://primedubai.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Image
-                      src={props.groupLogo as StaticImageData}
-                      alt="group-company"
-                    />
-                  </a>
-                </div>
               </div>
             </div>
           </div>
