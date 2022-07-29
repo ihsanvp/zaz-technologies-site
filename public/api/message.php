@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = $_POST["message"];
         $message = wordwrap($message, 70);
 
-        $to = 'shameer@zazplus.com';
+        $to = 'support@zazplus.onmicrosoft.com';
         $subject = "Message from {$name}";
 
         $msg = "
