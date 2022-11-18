@@ -40,9 +40,11 @@ const LINKS: AppLink[] = [
 
 const SOCIALS: AppSocial[] = [
   {
-    url: `https://wa.me/+917994152171?text=${encodeURIComponent(
-      "I'd like to chat with you"
-    )}`,
+    url:
+      // `https://wa.me/+917994152171?text=${encodeURIComponent(
+      //   "I'd like to chat with you"
+      // )}`
+      "",
     icon: IoLogoWhatsapp,
   },
   {

@@ -1,5 +1,4 @@
 import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp";
-import AnimatedAppear from "components/common/AnimatedAppear";
 import { motion } from "framer-motion";
 
 export default function HomeFloatingWhatsappButton() {
@@ -13,9 +12,12 @@ export default function HomeFloatingWhatsappButton() {
       <a
         target="_blank"
         rel="noreferrer"
-        href={`https://wa.me/+917994152171?text=${encodeURIComponent(
-          "I'd like to chat with you"
-        )}`}
+        href={
+          //   `https://wa.me/+917994152171?text=${encodeURIComponent(
+          //   "I'd like to chat with you"
+          // )}`
+          ""
+        }
         className="p-3 flex items-center justify-center rounded-full bg-green-500 text-white shadow"
       >
         <FaWhatsapp size="30" />
